@@ -1,6 +1,5 @@
 #!/bin/sh
 utcs="name"
-fullname=$(basename $0)
-shortname=${fullname%.*}
+shortname=${0%.*}
 output=$(ruby "$shortname".rb)
 ssh $utcs@$output
